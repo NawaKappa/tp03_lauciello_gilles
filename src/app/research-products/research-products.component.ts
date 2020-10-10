@@ -18,6 +18,9 @@ export class ResearchProductsComponent implements OnInit {
   productsFiltered: Product[];
   products: Observable<Product[]>;
 
+  minPrice: number;
+  maxPrice: number;
+
   constructor(private service:ProductApiService) { }
 
   ngOnInit() {
@@ -26,7 +29,7 @@ export class ResearchProductsComponent implements OnInit {
 
   affiche(){
     this.products.pipe(
-      map(data => data.filter(w => w.productName == this.search))
+      map(data => data.filter(w => w.productName == this.search).filter(w => w.price > this.minPrice))
     ).subscribe((data: any) => this.productsFiltered = data);
   }
 
