@@ -35,7 +35,7 @@
   {{ product.price }} - {{ product.productName }} - {{ product.description }}
 </p>
 
-<table class="table table-striped">
+<table class="table table-striped" *ngIf="productsFiltered">
     <tr>
         <th>Prix</th>
         <th>Nom du produit</th>
@@ -43,7 +43,7 @@
         <th>Aperçu</th>
     </tr>
     <tbody>
-    <tr *ngFor="let product of productsFiltered| async">
+    <tr *ngFor="let product of products| async">
         <td>{{ product.price }}</td>
         <td>{{ product.productName }}</td>
         <td>{{ product.description }}</td>
