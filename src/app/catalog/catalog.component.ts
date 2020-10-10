@@ -10,7 +10,7 @@ import { ProductApiService } from '../product-api.service';
 })
 export class CatalogComponent implements OnInit {
 
-products: Observable<Product[]>;
+  products: Observable<Product[]>;
 
   constructor(private service:ProductApiService) { }
 

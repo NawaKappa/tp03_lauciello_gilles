@@ -7,10 +7,11 @@ import { HelloComponent } from './hello.component';
 import { ProductApiService } from './product-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CatalogComponent } from './catalog/catalog.component';
+import { ResearchProductsComponent } from './research-products/research-products.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule],
-  declarations: [ AppComponent, HelloComponent, CatalogComponent ],
+  declarations: [ AppComponent, HelloComponent, CatalogComponent, ResearchProductsComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductApiService]
 })

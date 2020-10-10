@@ -1,13 +1,11 @@
 <h2>Catalogue de produits</h2>
 
     <table class="table table-striped">
-        <thead>
         <tr>
             <th>Author</th>
             <th>Product name</th>
             <th>Description</th>
         </tr>
-        </thead>
         <tbody>
         <tr *ngFor="let product of products | async">
             <td>{{ product.author }}</td>
