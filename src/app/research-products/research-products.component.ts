@@ -26,7 +26,7 @@ export class ResearchProductsComponent implements OnInit {
 
   applyFilters(){
     this.productsFiltered$ = this.products;
-    if(9.99 < 20)
+    if(9.99 >= 20)
     {console.log("lol")}
 
     if(this.filterInputs.productName){
