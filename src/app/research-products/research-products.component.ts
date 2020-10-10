@@ -47,14 +47,16 @@ export class ResearchProductsComponent implements OnInit {
   }
 
   applyMinPriceFilter(){
+    let minPrice: number = +this.filterInputs.minPrice; 
     this.productsFiltered$ = this.productsFiltered$.pipe(
-      map(data => data.filter(w => w.price >= this.filterInputs.minPrice))
+      map(data => data.filter(w => w.price >= minPrice))
     );
   }
 
   applyMaxPriceFilter(){
+    let maxPrice: number = +this.filterInputs.maxPrice; 
     this.productsFiltered$ = this.productsFiltered$.pipe(
-      map(data => data.filter(w => w.price <= this.filterInputs.maxPrice))
+      map(data => data.filter(w => w.price <= maxPrice))
     );
   }
 
