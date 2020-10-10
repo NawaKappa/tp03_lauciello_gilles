@@ -22,5 +22,11 @@
         "price": "19.99",
         "productName": "Lot de briquets",
         "description": "Un lot de 7 briquets"
-    }
+    },
+    {
+        "id": 4,
+        "price": "20.99",
+        "productName": "Peluche",
+        "description": "Un joli nounours très grand"
+    },
 ]

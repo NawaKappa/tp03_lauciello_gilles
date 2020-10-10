@@ -1,8 +1,9 @@
 <div class="container bootstrap snipets">
    <h1 class="text-center text-muted">Catalogue de produits</h1>
    <div class="row flow-offset-1">
-     <div class="col-xs-6 col-md-4" *ngFor="let product of products | async">
-       <div class="product tumbnail thumbnail-3"><a href="#"><img src="https://via.placeholder.com/350x280/FFB6C1/000000" alt=""></a>
+     <div class="col-xs-6 col-md-3" *ngFor="let product of products | async">
+       <div class="product tumbnail thumbnail-3"><a href="#"><img src="https://p0.pikist.com/photos/476/352/teddy-bank-sit-teddy-bear-bear-fun-plush-funny-cute.jpg" alt=""
+        width="150" height="125" ></a>
          <div class="caption">
            <h6><a href="#">{{product.productName}} : {{product.description}}</a></h6><span class="price">
             {{product.price}}€</span>
