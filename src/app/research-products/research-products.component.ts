@@ -14,12 +14,9 @@ import { ProductApiService } from '../product-api.service';
 })
 export class ResearchProductsComponent implements OnInit {
 
-  search: string;
   productsFiltered: Product[];
   products: Observable<Product[]>;
-
-  minPrice: number;
-  maxPrice: number;
+  filterInputs: any = {};
 
   constructor(private service:ProductApiService) { }
 
@@ -29,7 +26,7 @@ export class ResearchProductsComponent implements OnInit {
 
   affiche(){
     this.products.pipe(
-      map(data => data.filter(w => w.productName == this.search).filter(w => w.price > this.minPrice))
+      map(data => data.filter(w => w.productName == this.filterInputs.productName).filter(w => w.price > this.filterInputs.minPrice))
     ).subscribe((data: any) => this.productsFiltered = data);
   }
 
