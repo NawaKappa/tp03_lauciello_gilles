@@ -23,7 +23,7 @@ export class ResearchProductsComponent implements OnInit {
 
   affiche(){
     this.products.pipe(
-      map(data => data.filter(w => w.author == this.search))
+      map(data => data.filter(w => w.productName == this.search))
     ).subscribe((data: any) => this.productsFiltered = data);
   }
 
