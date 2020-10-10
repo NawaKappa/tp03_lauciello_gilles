@@ -39,22 +39,20 @@
 <p>Cherchez par nom d'auteur</p>
 <button type="submit" class="fa fa-search" (click)="affiche()">Search</button>
 
-<p *ngFor="let product of productsFiltered">
-  {{ product.price }} - {{ product.productName }} - {{ product.description }}
-</p>
-
 
    <table class="table table-striped">
         <tr>
-            <th>Author</th>
-            <th>Product name</th>
+            <th>Prix</th>
+            <th>Nom du produit</th>
             <th>Description</th>
         </tr>
         <tbody>
-        <tr *ngFor="let product of products | async">
+        <tr *ngFor="let product of productsFiltered | async">
             <td>{{ product.price }}</td>
             <td>{{ product.productName }}</td>
             <td>{{ product.description }}</td>
+            <td><img src="https://p0.pikist.com/photos/476/352/teddy-bank-sit-teddy-bear-bear-fun-plush-funny-cute.jpg" alt=""
+              width="150" height="125" ></td>
         </tr>
         </tbody>
     </table>
