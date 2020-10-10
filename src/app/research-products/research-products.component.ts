@@ -14,7 +14,7 @@ import { ProductApiService } from '../product-api.service';
 })
 export class ResearchProductsComponent implements OnInit {
 
-  productsFiltered: Product[];
+  productsFiltered$: Observable<Product[]>;
   products: Observable<Product[]>;
   filterInputs: any = {};
 
@@ -25,20 +25,41 @@ export class ResearchProductsComponent implements OnInit {
   }
 
   applyFilters(){
+    this.productsFiltered$ = this.products;
+
     if(this.filterInputs.productName){
       this.applyProductNameFilter();
     }
-    else{
-      console.log("rien");
+    if(this.filterInputs.minPrice){
+      this.applyMinPriceFilter();
+    }
+    if(this.filterInputs.maxPrice){
+      this.applyMaxPriceFilter();
     }
 
   }
 
-  applyProductNameFilter(){
-    this.products.pipe(
-      map(data => data.filter(w => w.productName == this.filterInputs.productName))
-    ).subscribe((data: any) => this.productsFiltered = data);
+  
 
+  applyProductNameFilter(){
+   /* this.products.pipe(
+      map(data => data.filter(w => w.productName == this.filterInputs.productName))
+    ).subscribe((data: any) => this.productsFiltered$ = data);*/
+    this.productsFiltered$ = this.products.pipe(
+      map(data => data.filter(w => w.productName == this.filterInputs.productName))
+    );
+  }
+
+  applyMinPriceFilter(){
+    this.productsFiltered$ = this.products.pipe(
+      map(data => data.filter(w => w.productName == this.filterInputs.productName))
+    );
+  }
+
+  applyMaxPriceFilter(){
+    this.productsFiltered$ = this.products.pipe(
+      map(data => data.filter(w => w.productName == this.filterInputs.productName))
+    );
   }
 
 }
