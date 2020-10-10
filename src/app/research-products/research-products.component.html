@@ -37,16 +37,16 @@
 
 <table class="table table-striped" *ngIf="productsFiltered">
     <tr>
-        <th>Prix</th>
         <th>Nom du produit</th>
         <th>Description</th>
+        <th>Prix</th>
         <th>Aperçu</th>
     </tr>
     <tbody>
     <tr *ngFor="let product of products| async">
-        <td>{{ product.price }}</td>
         <td>{{ product.productName }}</td>
         <td>{{ product.description }}</td>
+        <td>{{ product.price }}€</td>
         <td><img src="https://p0.pikist.com/photos/476/352/teddy-bank-sit-teddy-bear-bear-fun-plush-funny-cute.jpg" alt=""
           width="150" height="125" ></td>
     </tr>
