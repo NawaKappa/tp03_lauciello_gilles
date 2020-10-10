@@ -12,7 +12,7 @@
         <form class="form-inline" role="form">
           <div class="form-group">
               <label class="filter-col" style="margin-right:0;" for="pref-search">Nom du produit:</label>
-              <input type="text" class="form-control input-sm" placeholder="Search..." name="filterInputs.productName" [(ngModel)]="filterInputs.productName">
+              <input (keyup)="affiche()" type="text" class="form-control input-sm" placeholder="Search..." name="filterInputs.productName" [(ngModel)]="filterInputs.productName">
           </div>
           <div class="form-group">
               <label class="filter-col" style="margin-right:0;" for="pref-search">Prix minimum:</label>
