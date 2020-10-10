@@ -26,6 +26,8 @@ export class ResearchProductsComponent implements OnInit {
 
   applyFilters(){
     this.productsFiltered$ = this.products;
+    console.log(this.filterInputs);
+    this.products.subscribe(val => console.log(val));
 
     if(this.filterInputs.productName){
       this.applyProductNameFilter();
@@ -42,24 +44,27 @@ export class ResearchProductsComponent implements OnInit {
   
 
   applyProductNameFilter(){
-   /* this.products.pipe(
+   /*= this.products.pipe(
       map(data => data.filter(w => w.productName == this.filterInputs.productName))
     ).subscribe((data: any) => this.productsFiltered$ = data);*/
-    this.productsFiltered$ = this.products.pipe(
+    this.productsFiltered$ = this.productsFiltered$.pipe(
       map(data => data.filter(w => w.productName == this.filterInputs.productName))
     );
+    console.log("name filter");
   }
 
   applyMinPriceFilter(){
     this.productsFiltered$ = this.products.pipe(
-      map(data => data.filter(w => w.productName == this.filterInputs.productName))
+      map(data => data.filter(w => w.price >= this.filterInputs.minPrice))
     );
+    console.log("min price filter");
   }
 
   applyMaxPriceFilter(){
     this.productsFiltered$ = this.products.pipe(
-      map(data => data.filter(w => w.productName == this.filterInputs.productName))
+      map(data => data.filter(w => w.price <= this.filterInputs.maxPrice))
     );
+    console.log("max price filter");
   }
 
 }

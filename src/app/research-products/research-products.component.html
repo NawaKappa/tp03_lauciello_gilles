@@ -19,8 +19,8 @@
               <input (keyup)="applyFilters()" type="text" class="form-control input-sm" placeholder="€" name="filterInputs.minPrice" [(ngModel)]="filterInputs.minPrice">
           </div>
           <div class="form-group">
-              <label (keyup)="applyFilters()" class="filter-col" style="margin-right:0;" for="pref-search">Prix maximum:</label>
-              <input type="text" class="form-control input-sm" placeholder="€" name="filterInputs.maxPrice" [(ngModel)]="filterInputs.maxPrice">
+              <label class="filter-col" style="margin-right:0;" for="pref-search">Prix maximum:</label>
+              <input (keyup)="applyFilters()" type="text" class="form-control input-sm" placeholder="€" name="filterInputs.maxPrice" [(ngModel)]="filterInputs.maxPrice">
           </div>
           <div class="form-group">    
             <button type="submit" class="btn btn-default filter-col" (click)="applyFilters()">
