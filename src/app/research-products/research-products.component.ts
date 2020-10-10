@@ -26,8 +26,6 @@ export class ResearchProductsComponent implements OnInit {
 
   applyFilters(){
     this.productsFiltered$ = this.products;
-    if(9.99 >= 20)
-    {console.log("lol")}
 
     if(this.filterInputs.productName){
       this.applyProductNameFilter();
@@ -38,15 +36,11 @@ export class ResearchProductsComponent implements OnInit {
     if(this.filterInputs.maxPrice){
       this.applyMaxPriceFilter();
     }
-    this.productsFiltered$.subscribe(val => console.log(val));
   }
 
   
 
   applyProductNameFilter(){
-   /*= this.products.pipe(
-      map(data => data.filter(w => w.productName == this.filterInputs.productName))
-    ).subscribe((data: any) => this.productsFiltered$ = data);*/
     this.productsFiltered$ = this.productsFiltered$.pipe(
       map(data => data.filter(w => w.productName == this.filterInputs.productName))
     );
