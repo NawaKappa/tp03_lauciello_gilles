@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from '../Models/product';
 import { ProductApiService } from '../product-api.service';
 
 @Component({
@@ -8,10 +10,12 @@ import { ProductApiService } from '../product-api.service';
 })
 export class CatalogComponent implements OnInit {
 
+products: Observable<Product[]>;
+
   constructor(private service:ProductApiService) { }
 
   ngOnInit() {
-    this.service.getProducts();
+    this.products = this.service.getProducts();
   }
 
 }

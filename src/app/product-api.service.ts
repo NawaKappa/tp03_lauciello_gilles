@@ -10,11 +10,11 @@ export class ProductApiService {
   constructor(private client:HttpClient) {
   }
 
-  public getProducts() : Observable<any> {
-    this.client.get<any>(environment.backendProducts).subscribe((value) => {
+  public getProducts() : Observable<Product[]> {
+    this.client.get<Product[]>(environment.backendProducts).subscribe((value) => {
       console.log(value);
     });
-    return this.client.get<any>(environment.backendProducts);
+    return this.client.get<Product[]>(environment.backendProducts);
   }
 
 }
