@@ -12,7 +12,7 @@
         <form class="form-inline" role="form">
           <div class="form-group">
               <label class="filter-col" style="margin-right:0;" for="pref-search">Nom du produit:</label>
-              <input (keyup)="affiche()" type="text" class="form-control input-sm" placeholder="Search..." name="filterInputs.productName" [(ngModel)]="filterInputs.productName">
+              <input (keyup)="applyFilters()" type="text" class="form-control input-sm" placeholder="Search..." name="filterInputs.productName" [(ngModel)]="filterInputs.productName">
           </div>
           <div class="form-group">
               <label class="filter-col" style="margin-right:0;" for="pref-search">Prix minimum:</label>
@@ -23,7 +23,7 @@
               <input type="text" class="form-control input-sm" placeholder="€" name="filterInputs.maxPrice" [(ngModel)]="filterInputs.maxPrice">
           </div>
           <div class="form-group">    
-            <button type="submit" class="btn btn-default filter-col" (click)="affiche()">
+            <button type="submit" class="btn btn-default filter-col" (click)="applyFilters()">
               <span class="glyphicon glyphicon-record"></span> Search
             </button>  
           </div>

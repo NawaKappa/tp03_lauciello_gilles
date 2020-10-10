@@ -24,10 +24,21 @@ export class ResearchProductsComponent implements OnInit {
     this.products = this.service.getProducts();
   }
 
-  affiche(){
+  applyFilters(){
+    if(this.filterInputs.productName){
+      this.applyProductNameFilter();
+    }
+    else{
+      console.log("rien");
+    }
+
+  }
+
+  applyProductNameFilter(){
     this.products.pipe(
-      map(data => data.filter(w => w.productName == this.filterInputs.productName).filter(w => w.price > this.filterInputs.minPrice))
+      map(data => data.filter(w => w.productName == this.filterInputs.productName))
     ).subscribe((data: any) => this.productsFiltered = data);
+
   }
 
 }
