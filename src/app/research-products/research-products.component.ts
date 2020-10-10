@@ -54,14 +54,14 @@ export class ResearchProductsComponent implements OnInit {
   }
 
   applyMinPriceFilter(){
-    this.productsFiltered$ = this.products.pipe(
+    this.productsFiltered$ = this.productsFiltered$.pipe(
       map(data => data.filter(w => w.price >= this.filterInputs.minPrice))
     );
     console.log("min price filter");
   }
 
   applyMaxPriceFilter(){
-    this.productsFiltered$ = this.products.pipe(
+    this.productsFiltered$ = this.productsFiltered$.pipe(
       map(data => data.filter(w => w.price <= this.filterInputs.maxPrice))
     );
     console.log("max price filter");
