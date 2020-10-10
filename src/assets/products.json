@@ -1,26 +1,26 @@
 [
     {
         "id": 0,
-        "price": "Google",
-        "productName": "Angular",
-        "description": "A super web language"
+        "price": "15.50",
+        "productName": "Peluche",
+        "description": "Un joli petit nounours"
     },
      {
         "id": 1,
-        "price": "Google",
-        "productName": "Angular",
-        "description": "A super web language"
+        "price": "26",
+        "productName": "Licorne",
+        "description": "Une superbe licorne rose"
     },
      {
         "id": 2,
-        "price": "Google",
-        "productName": "Angular",
-        "description": "A super web language"
+        "price": "9.99",
+        "productName": "Lunettes de soleil",
+        "description": "Une paire de lunettes de soleil rose"
     },
      {
         "id": 3,
-        "price": "Google",
-        "productName": "Angular",
-        "description": "A super web language"
+        "price": "19.99",
+        "productName": "Lot de briquets",
+        "description": "Un lot de 7 briquets"
     }
 ]
