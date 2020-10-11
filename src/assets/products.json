@@ -4,7 +4,7 @@
         "price": "15.50",
         "productName": "Peluche",
         "description": "Un joli petit nounours",
-        "img": "/../assets/pelucheSimple.jpg"
+        "img": "https://cdn.jsdelivr.net/gh/NawaKappa/tp03_lauciello_gilles@master/src/assets/images/pelucheSimple.jpg"
     },
      {
         "id": 1,
