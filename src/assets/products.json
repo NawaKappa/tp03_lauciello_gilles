@@ -18,20 +18,20 @@
         "price": "8.99",
         "productName": "Lunettes de soleil",
         "description": "Une paire de lunettes de soleil rose",
-        "img": "../assets/Img/pelucheSimple.jpg"
+        "img": "https://cdn.jsdelivr.net/gh/NawaKappa/tp03_lauciello_gilles@master/src/assets/images/lunettessoleilrose.jpg"
     },
      {
         "id": 3,
         "price": "19.99",
         "productName": "Lot de briquets",
         "description": "Un lot de 5 briquets",
-        "img": "../assets/Img/pelucheSimple.jpg"
+        "img": "https://cdn.jsdelivr.net/gh/NawaKappa/tp03_lauciello_gilles@master/src/assets/images/lotbriquets.jpg"
     },
     {
         "id": 4,
         "price": "20.99",
         "productName": "Peluche",
         "description": "Un joli nounours très grand",
-        "img": "../assets/Img/pelucheSimple.jpg"
+        "img": "https://cdn.jsdelivr.net/gh/NawaKappa/tp03_lauciello_gilles@master/src/assets/images/grandepeluche.jpg"
     }
 ]
