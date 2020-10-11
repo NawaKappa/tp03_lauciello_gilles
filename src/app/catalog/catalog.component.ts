@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { Product } from '../Models/product';
 import { ProductApiService } from '../product-api.service';
 
-//source : https://www.bootdey.com/snippets/view/product-catalog#html
 
 @Component({
   selector: 'app-catalog',

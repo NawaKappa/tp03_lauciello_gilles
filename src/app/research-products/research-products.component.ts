@@ -4,8 +4,6 @@ import { map } from 'rxjs/operators';
 import { Product } from '../Models/product';
 import { ProductApiService } from '../product-api.service';
 
-//source : https://bootsnipp.com/snippets/xvEkQ
-
 
 @Component({
   selector: 'app-research-products',
