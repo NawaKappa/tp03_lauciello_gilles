@@ -11,7 +11,7 @@
         "price": "26",
         "productName": "Licorne",
         "description": "Une superbe licorne rose",
-        "img": "../assets/images/pelucheSimple.jpg"
+        "img": "https://cdn.jsdelivr.net/gh/NawaKappa/tp03_lauciello_gilles@master/src/assets/images/licorne.jpg"
     },
      {
         "id": 2,
