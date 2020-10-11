@@ -3,30 +3,35 @@
         "id": 0,
         "price": "15.50",
         "productName": "Peluche",
-        "description": "Un joli petit nounours"
+        "description": "Un joli petit nounours",
+        "img": "Img/pelucheSimple.jpg"
     },
      {
         "id": 1,
         "price": "26",
         "productName": "Licorne",
-        "description": "Une superbe licorne rose"
+        "description": "Une superbe licorne rose",
+        "img": "Img/pelucheSimple.jpg"
     },
      {
         "id": 2,
         "price": "8.99",
         "productName": "Lunettes de soleil",
-        "description": "Une paire de lunettes de soleil rose"
+        "description": "Une paire de lunettes de soleil rose",
+        "img": "Img/pelucheSimple.jpg"
     },
      {
         "id": 3,
         "price": "19.99",
         "productName": "Lot de briquets",
-        "description": "Un lot de 7 briquets"
+        "description": "Un lot de 7 briquets",
+        "img": "Img/pelucheSimple.jpg"
     },
     {
         "id": 4,
         "price": "20.99",
         "productName": "Peluche",
-        "description": "Un joli nounours très grand"
+        "description": "Un joli nounours très grand",
+        "img": "Img/pelucheSimple.jpg"
     }
 ]
